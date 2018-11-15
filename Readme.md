@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
+* [NoPreviewQueryBuilderRunner.cs](./CS/NoPreviewQueryBuilderRunner.cs) (VB: [NoPreviewQueryBuilderRunner.vb](./VB/NoPreviewQueryBuilderRunner.vb))
+<!-- default file list end -->
 # How to use the Query Builder in a WinForms application
 
 
