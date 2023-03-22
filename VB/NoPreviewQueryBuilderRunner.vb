@@ -30,7 +30,7 @@ Namespace StandaloneQueryBuilderSample
         End Sub
 
         Protected Overrides Function CreateView(ByVal queryBuilderViewModel As QueryBuilderViewModel) As IQueryBuilderView
-            Return New NoPreviewQueryBuilderView(queryBuilderViewModel, Owner, LookAndFeel, ParameterService, PropertyGridServices, NoCustomSql, Light, DisplayNameProvider, NoDiagramControl, LegacyExpressionEditor, LoaderExceptionHandler, RepositoryItemsProvider)
+            Return New NoPreviewQueryBuilderView(queryBuilderViewModel, Owner, LookAndFeel, ParameterService, PropertyGridServices, Not EnableCustomSql, Light, DisplayNameProvider, NoDiagramControl, LegacyExpressionEditor, LoaderExceptionHandler, RepositoryItemsProvider)
         End Function
     End Class
 End Namespace

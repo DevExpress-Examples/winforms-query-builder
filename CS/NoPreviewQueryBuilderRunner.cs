@@ -30,8 +30,8 @@ namespace StandaloneQueryBuilderSample {
         }
 
         protected override IQueryBuilderView CreateView(QueryBuilderViewModel queryBuilderViewModel) {
-            return new NoPreviewQueryBuilderView(queryBuilderViewModel, Owner, LookAndFeel, ParameterService, PropertyGridServices, 
-                NoCustomSql, Light, DisplayNameProvider, NoDiagramControl, LegacyExpressionEditor, LoaderExceptionHandler, RepositoryItemsProvider);
+            return new NoPreviewQueryBuilderView(queryBuilderViewModel, Owner, LookAndFeel, ParameterService, PropertyGridServices,
+                !EnableCustomSql, Light, DisplayNameProvider, NoDiagramControl, LegacyExpressionEditor, LoaderExceptionHandler, RepositoryItemsProvider);
         }
     }
 }
