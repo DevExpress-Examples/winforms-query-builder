@@ -1,5 +1,7 @@
-﻿Namespace StandaloneQueryBuilderSample
-    Partial Public Class Form1
+Namespace StandaloneQueryBuilderSample
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,31 +12,31 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
-            Dim selectQuery1 As New DevExpress.DataAccess.Sql.SelectQuery()
-            Dim column1 As New DevExpress.DataAccess.Sql.Column()
-            Dim columnExpression1 As New DevExpress.DataAccess.Sql.ColumnExpression()
-            Dim table1 As New DevExpress.DataAccess.Sql.Table()
-            Dim column2 As New DevExpress.DataAccess.Sql.Column()
-            Dim columnExpression2 As New DevExpress.DataAccess.Sql.ColumnExpression()
-            Dim column3 As New DevExpress.DataAccess.Sql.Column()
-            Dim columnExpression3 As New DevExpress.DataAccess.Sql.ColumnExpression()
-            Dim column4 As New DevExpress.DataAccess.Sql.Column()
-            Dim columnExpression4 As New DevExpress.DataAccess.Sql.ColumnExpression()
-            Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+            Dim selectQuery1 As DevExpress.DataAccess.Sql.SelectQuery = New DevExpress.DataAccess.Sql.SelectQuery()
+            Dim column1 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+            Dim columnExpression1 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+            Dim table1 As DevExpress.DataAccess.Sql.Table = New DevExpress.DataAccess.Sql.Table()
+            Dim column2 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+            Dim columnExpression2 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+            Dim column3 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+            Dim columnExpression3 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+            Dim column4 As DevExpress.DataAccess.Sql.Column = New DevExpress.DataAccess.Sql.Column()
+            Dim columnExpression4 As DevExpress.DataAccess.Sql.ColumnExpression = New DevExpress.DataAccess.Sql.ColumnExpression()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StandaloneQueryBuilderSample.Form1))
             Me.layoutControl1 = New DevExpress.XtraLayout.LayoutControl()
             Me.fillButton = New DevExpress.XtraEditors.SimpleButton()
             Me.runQBButton = New DevExpress.XtraEditors.SimpleButton()
@@ -47,15 +49,15 @@
             Me.sqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
             Me.cbHidePreview = New System.Windows.Forms.CheckBox()
             Me.layoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
-            CType(Me.layoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.layoutControl1.SuspendLayout()
-            CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.layoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.gridControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.gridView1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem2), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem3), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem4), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' layoutControl1
@@ -81,6 +83,7 @@
             Me.fillButton.StyleController = Me.layoutControl1
             Me.fillButton.TabIndex = 6
             Me.fillButton.Text = "Fill"
+            AddHandler Me.fillButton.Click, New System.EventHandler(AddressOf Me.fillButton_Click)
             ' 
             ' runQBButton
             ' 
@@ -90,6 +93,7 @@
             Me.runQBButton.StyleController = Me.layoutControl1
             Me.runQBButton.TabIndex = 5
             Me.runQBButton.Text = "Run Query Builder..."
+            AddHandler Me.runQBButton.Click, New System.EventHandler(AddressOf Me.runQBButton_Click)
             ' 
             ' gridControl1
             ' 
@@ -98,7 +102,7 @@
             Me.gridControl1.Name = "gridControl1"
             Me.gridControl1.Size = New System.Drawing.Size(708, 419)
             Me.gridControl1.TabIndex = 4
-            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.gridView1})
+            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gridView1})
             ' 
             ' gridView1
             ' 
@@ -107,9 +111,9 @@
             ' 
             ' layoutControlGroup1
             ' 
-            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True
+            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
             Me.layoutControlGroup1.GroupBordersVisible = False
-            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() { Me.layoutControlItem1, Me.layoutControlItem2, Me.layoutControlItem3, Me.layoutControlItem4})
+            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutControlItem1, Me.layoutControlItem2, Me.layoutControlItem3, Me.layoutControlItem4})
             Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
             Me.layoutControlGroup1.Name = "Root"
             Me.layoutControlGroup1.Size = New System.Drawing.Size(732, 493)
@@ -165,7 +169,7 @@
             selectQuery1.Columns.Add(column4)
             selectQuery1.Name = "Categories"
             selectQuery1.Tables.Add(table1)
-            Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() { selectQuery1})
+            Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {selectQuery1})
             Me.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable")
             ' 
             ' cbHidePreview
@@ -194,33 +198,41 @@
             Me.Controls.Add(Me.layoutControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            CType(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.layoutControl1.ResumeLayout(False)
-            CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.gridView1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.layoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.gridControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.gridView1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem2), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem3), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem4), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private layoutControl1 As DevExpress.XtraLayout.LayoutControl
-        Private WithEvents fillButton As DevExpress.XtraEditors.SimpleButton
-        Private WithEvents runQBButton As DevExpress.XtraEditors.SimpleButton
+
+        Private fillButton As DevExpress.XtraEditors.SimpleButton
+
+        Private runQBButton As DevExpress.XtraEditors.SimpleButton
+
         Private gridControl1 As DevExpress.XtraGrid.GridControl
+
         Private gridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+
         Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+
         Private layoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+
         Private layoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
+
         Private layoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
+
         Private sqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
+
         Private cbHidePreview As System.Windows.Forms.CheckBox
+
         Private layoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
     End Class
 End Namespace
-
