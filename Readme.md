@@ -1,22 +1,26 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128582906/22.2.8%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T553576)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# Reporting for WinForms - Query Builder
+
+This example shows how you can invoke the Query Builder in a WinForms application. 
+
+![Query Builder in a WinForms application](Images/screenshot.png)
+
+Click the **Run Query Builder** button on the form to invoke the [Query Builder](https://docs.devexpress.com/WindowsForms/119019/common-features/data-source-wizard/query-builder). After you add a new query and close the Query Builder window, click **Fill** to populate the **Grid Control** with data from the query.
+
+## Files to Review
 
 * [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
 * [NoPreviewQueryBuilderRunner.cs](./CS/NoPreviewQueryBuilderRunner.cs) (VB: [NoPreviewQueryBuilderRunner.vb](./VB/NoPreviewQueryBuilderRunner.vb))
-<!-- default file list end -->
-# How to use the Query Builder in a WinForms application
 
+## Documentation
 
-This example illustrates how to invoke the Query Builder in a WinForms application using the following methods of the <strong>SqlDataSourceUIHelper</strong> class
+- [Query Builder](https://docs.devexpress.com/WindowsForms/119019/common-features/data-source-wizard/query-builder)
+- [SqlDataSourceUIHelper.AddQueryWithQueryBuilder](https://docs.devexpress.com/WindowsForms/DevExpress.DataAccess.UI.Sql.SqlDataSourceUIHelper.AddQueryWithQueryBuilder.overloads)
+- [SqlDataSourceUIHelper.EditQueryWithQueryBuilder](https://docs.devexpress.com/WindowsForms/DevExpress.DataAccess.UI.Sql.SqlDataSourceUIHelper.EditQueryWithQueryBuilder.overloads)
 
-* <strong>AddQueryWithQueryBuilder</strong>
-* <strong>EditQueryWithQueryBuilder</strong><br>These methods' parameters include a <strong>QueryBuilderEditQueryContext</strong> instance and custom <strong>QueryBuilderRunner</strong> implementation that define various Query Builder options.<br><br>After adding a new query using the Query Builder in this sample application, click Fill to populate the Grid Control with the query's data.
+## More Examples
 
-<br/>
+- [How to Use the Query Builder Control in an ASP.NET Core Application](https://github.com/DevExpress-Examples/How-To-Use-Query-Builder-In-Asp-Net-Core)
+- [Data Source Wizard – How to customize the standard Query Builder dialog](https://github.com/DevExpress-Examples/Reporting_data-source-wizard-how-to-customize-the-standard-query-builder-dialog-t333785)
+
 
 
