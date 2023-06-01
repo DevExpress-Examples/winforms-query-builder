@@ -28,9 +28,5 @@ Namespace StandaloneQueryBuilderSample
         Public Sub New(ByVal dbSchema As DBSchema, ByVal connection As SqlDataConnection, ByVal context As QueryBuilderEditQueryContext)
             MyBase.New(dbSchema, connection, context)
         End Sub
-
-        Protected Overrides Function CreateView(ByVal queryBuilderViewModel As QueryBuilderViewModel) As IQueryBuilderView
-            Return New NoPreviewQueryBuilderView(queryBuilderViewModel, Owner, LookAndFeel, ParameterService, PropertyGridServices, NoCustomSql, Light, DisplayNameProvider, NoDiagramControl, LegacyExpressionEditor, LoaderExceptionHandler, RepositoryItemsProvider)
-        End Function
     End Class
 End Namespace
