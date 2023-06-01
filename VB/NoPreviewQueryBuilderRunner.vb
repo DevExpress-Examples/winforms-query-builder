@@ -1,4 +1,4 @@
-﻿Imports DevExpress.Data
+Imports DevExpress.Data
 Imports DevExpress.DataAccess.Native.Sql.QueryBuilder
 Imports DevExpress.DataAccess.Sql
 Imports DevExpress.DataAccess.UI.Native.Sql.QueryBuilder
@@ -10,6 +10,7 @@ Imports System
 Imports System.Windows.Forms
 
 Namespace StandaloneQueryBuilderSample
+
     Public Class NoPreviewQueryBuilderRunner
         Inherits QueryBuilderRunner
 
@@ -18,10 +19,10 @@ Namespace StandaloneQueryBuilderSample
 
             Public Sub New(ByVal viewModel As IQueryBuilderViewModel, ByVal owner As IWin32Window, ByVal lookAndFeel As UserLookAndFeel, ByVal parameterService As IParameterService, ByVal propertyGridServices As IServiceProvider, ByVal noCustomSql As Boolean, ByVal light As Boolean, ByVal displayNameProvider As IDisplayNameProvider, ByVal noDiagram As Boolean, ByVal legacyExpressionEditor As Boolean, ByVal loaderExceptionHandler As IExceptionHandler, ByVal repositoryItemsProvider As IRepositoryItemsProvider)
                 MyBase.New(viewModel, owner, lookAndFeel, parameterService, propertyGridServices, noCustomSql, light, displayNameProvider, noDiagram, legacyExpressionEditor, loaderExceptionHandler, repositoryItemsProvider)
-                Me.layoutItemFilterButton.OptionsTableLayoutItem.ColumnIndex = 0
-                Me.layoutItemParametersButton.OptionsTableLayoutItem.ColumnIndex = 1
-                Me.layoutItemPreviewButton.OptionsTableLayoutItem.ColumnIndex = 2
-                Me.layoutControl1.HideItem(Me.layoutItemPreviewButton)
+                layoutItemFilterButton.OptionsTableLayoutItem.ColumnIndex = 0
+                layoutItemParametersButton.OptionsTableLayoutItem.ColumnIndex = 1
+                layoutItemPreviewButton.OptionsTableLayoutItem.ColumnIndex = 2
+                layoutControl1.HideItem(layoutItemPreviewButton)
             End Sub
         End Class
 
