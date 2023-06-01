@@ -28,10 +28,5 @@ namespace StandaloneQueryBuilderSample {
         public NoPreviewQueryBuilderRunner(DBSchema dbSchema, SqlDataConnection connection, QueryBuilderEditQueryContext context)
             : base(dbSchema, connection, context) {
         }
-
-        protected override IQueryBuilderView CreateView(QueryBuilderViewModel queryBuilderViewModel) {
-            return new NoPreviewQueryBuilderView(queryBuilderViewModel, Owner, LookAndFeel, ParameterService, PropertyGridServices, 
-                !EnableCustomSql, Light, DisplayNameProvider, NoDiagramControl, LegacyExpressionEditor, LoaderExceptionHandler, RepositoryItemsProvider);
-        }
     }
 }
